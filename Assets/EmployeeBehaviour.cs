@@ -8,7 +8,7 @@ public class EmployeeBehaviour : MonoBehaviour
 {
     public bool isAvailable = true;
     public Transform currentTarget;
-    public float speed = 5f;
+    public float speed = 2f;
 
     // Update is called once per frame
     void Update()
@@ -23,7 +23,6 @@ public class EmployeeBehaviour : MonoBehaviour
     public void SetTarget(Transform target)
     {
         currentTarget = target;
-        isAvailable = false;
     }
 
     void MoveTowardsTarget()
@@ -35,7 +34,6 @@ public class EmployeeBehaviour : MonoBehaviour
         else
         {
             currentTarget = null;
-            isAvailable = true;
         }
 
     }

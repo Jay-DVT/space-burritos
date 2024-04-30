@@ -9,12 +9,12 @@ public class CustomerSpawner : MonoBehaviour
     public Vector2 destinationPosition; // World coordinates for the destination
     public Vector2 exitPosition; // World coordinates for the exit
 
-    public float flatSpawningDelta = 5f;
+    public float flatSpawningDelta = 7f;
     public float varianceSpawningDelta = 2f;
 
     void Start()
     {
-
+        SpawnCustomerAtPosition();
         StartCoroutine(SpawnCustomerRoutine());
 
     }
