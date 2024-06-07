@@ -7,6 +7,7 @@ public class CustomerSpawner : MonoBehaviour
     public GameObject customerPrefab; // Assign this from the editor
     public Vector2 spawnPosition; // World coordinates for spawning the customer
     public Vector2 destinationPosition; // World coordinates for the destination
+    private float deltaY = .8f;
     public Vector2 exitPosition; // World coordinates for the exit
 
     public float flatSpawningDelta = 7f;
@@ -36,6 +37,7 @@ public class CustomerSpawner : MonoBehaviour
         CustomerMovement customerMovement = customer.GetComponent<CustomerMovement>();
         if (customerMovement != null)
         {
+            destinationPosition = new Vector2(destinationPosition.x, destinationPosition.y + Random.Range(-deltaY, deltaY));
             customerMovement.SetDestination(destinationPosition, exitPosition);
         }
         else
