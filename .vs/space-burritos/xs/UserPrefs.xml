@@ -1,0 +1,32 @@
+﻿<Properties StartupConfiguration="{74B7692E-5F0F-7605-34D1-01A8BF90D914}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/UI.cs">
+    <Files>
+      <File FileName="Assets/EmployeeSpawner.cs" Line="16" Column="6" />
+      <File FileName="Assets/CustomerSpawner.cs" Line="1" Column="1" />
+      <File FileName="Assets/GameController.cs" />
+      <File FileName="Assets/Economy.cs" Line="1" Column="1" />
+      <File FileName="Assets/CookingStation.cs" Line="29" Column="35" />
+      <File FileName="Assets/EmployeeBehaviour.cs" Line="74" Column="6" />
+      <File FileName="Assets/UI.cs" Line="1" Column="1" />
+      <File FileName="Assets/CustomerMovement.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="space-burritos" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="UI.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="cab1764a-431f-4b50-9cad-0f7f26696ef5" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

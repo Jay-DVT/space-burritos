@@ -16,4 +16,5 @@ public class Economy : MonoBehaviour
     {
         money -= amount;
     }
+
 }
