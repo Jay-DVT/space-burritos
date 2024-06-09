@@ -10,6 +10,8 @@ public class GameController : MonoBehaviour
     public GameObject startGamePanel;
 
     private Economy economy;
+    public GameObject pauseMenuPanel;
+    private bool isPaused = false;
 
     void Start()
     {
@@ -20,8 +22,31 @@ public class GameController : MonoBehaviour
         }
     }
 
+    public void Resume()
+    {
+        pauseMenuPanel.SetActive(false);
+        Time.timeScale = 1f;
+        isPaused = false;
+    }
+
+    private void Pause()
+    {
+        pauseMenuPanel.SetActive(true);
+        Time.timeScale = 0f;
+        isPaused = true;
+    }
+
+    private void HandlePauseInput()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (isPaused) Resume();
+            else Pause();
+        }
+    }
     void Update()
     {
+        HandlePauseInput();
         if (Input.GetKeyDown(KeyCode.Space))
         {
             CheckMoneyAndEndGame();
