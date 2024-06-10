@@ -6,7 +6,7 @@ using TMPro;
 public class UI : MonoBehaviour
 {
     public TextMeshProUGUI moneyText;
-    private Economy economy; // Reference to your Economy script
+    public Economy economy; // Reference to your Economy script
 
     void Start()
     {
