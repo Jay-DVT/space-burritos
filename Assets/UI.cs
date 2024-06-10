@@ -5,19 +5,25 @@ using TMPro;
 
 public class UI : MonoBehaviour
 {
+    private GameController gameController;
     public TextMeshProUGUI moneyText;
 
+
+    void Start()
+    {
+        gameController = FindObjectOfType<GameController>();
+    }
 
     void Update()
     {
         int money = Economy.GetInstance().money;
-        if (money >= 10)
+        if (money < gameController.requiredMoney)
         {
-            moneyText.text = "Money: $" + money.ToString() + " \nPress Space to win!";
+            moneyText.text = "Money: $" + money.ToString(); // Update the text
         }
         else
         {
-            moneyText.text = "Money: $" + money.ToString(); // Update the text
+            moneyText.text = "Money: $" + money.ToString() + " \nPress Space to win!";
         }
     }
 }
