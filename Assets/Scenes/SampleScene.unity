@@ -2984,8 +2984,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -325.8937, y: 208}
-  m_SizeDelta: {x: 310.2127, y: 41.785}
+  m_AnchoredPosition: {x: -204.34067, y: 208}
+  m_SizeDelta: {x: 553.3188, y: 41.785}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &384895059
 MonoBehaviour:
@@ -3007,7 +3007,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: 'Remaining Time:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5923,6 +5923,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1195914255}
   m_CullTransparentMesh: 1
+--- !u!1 &1213033698
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1213033700}
+  - component: {fileID: 1213033699}
+  m_Layer: 0
+  m_Name: TimeManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1213033699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1213033698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b84be0c04654ae24cb5dcca3a5c9386e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerText: {fileID: 384895059}
+  startTime: 300
+  gameOverPanel: {fileID: 1552825279}
+--- !u!4 &1213033700
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1213033698}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 448.42337, y: 281.366, z: 2.3298767}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1277594917
 GameObject:
   m_ObjectHideFlags: 0
@@ -5936,7 +5983,6 @@ GameObject:
   - component: {fileID: 1277594920}
   - component: {fileID: 1277594921}
   - component: {fileID: 1277594922}
-  - component: {fileID: 1277594923}
   m_Layer: 0
   m_Name: StateManager
   m_TagString: Untagged
@@ -5972,7 +6018,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   requiredMoney: 100
-  countdownTimer: {fileID: 0}
+  countdownTimer: {fileID: 1213033699}
   endGamePanel: {fileID: 1895215434}
   startGamePanel: {fileID: 2111054925}
   pauseMenuPanel: {fileID: 1896876886}
@@ -6035,21 +6081,6 @@ MonoBehaviour:
   - {fileID: 1195914257}
   - {fileID: 1344020916}
   - {fileID: 1635261134}
---- !u!114 &1277594923
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1277594917}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b84be0c04654ae24cb5dcca3a5c9386e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timerText: {fileID: 384895059}
-  startTime: 300
-  gameOverPanel: {fileID: 1552825279}
 --- !u!1 &1337399475
 GameObject:
   m_ObjectHideFlags: 0
@@ -6948,8 +6979,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1020641878}
   - {fileID: 384895058}
+  - {fileID: 1020641878}
   - {fileID: 75296983}
   - {fileID: 1896876887}
   - {fileID: 16624977}
@@ -9594,6 +9625,7 @@ SceneRoots:
   - {fileID: 8736897}
   - {fileID: 1406706640}
   - {fileID: 1277594918}
+  - {fileID: 1213033700}
   - {fileID: 1895215438}
   - {fileID: 2067465369}
   - {fileID: 685729942}
