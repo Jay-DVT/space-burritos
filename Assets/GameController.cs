@@ -11,6 +11,7 @@ public class GameController : MonoBehaviour
 
     private Economy economy;
     public GameObject pauseMenuPanel;
+    public GameObject upgradeMenuPanel;
     private bool isPaused = false;
 
     void Start()
@@ -25,8 +26,16 @@ public class GameController : MonoBehaviour
     public void Resume()
     {
         pauseMenuPanel.SetActive(false);
+        upgradeMenuPanel.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
+    }
+
+    public void UpgradeMenu()
+    {
+        upgradeMenuPanel.SetActive(true);
+        Time.timeScale = 0f;
+        isPaused = true;
     }
 
     private void Pause()
