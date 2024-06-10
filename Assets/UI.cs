@@ -19,11 +19,11 @@ public class UI : MonoBehaviour
         int money = Economy.GetInstance().money;
         if (money < gameController.requiredMoney)
         {
-            moneyText.text = "Money: $" + money.ToString(); // Update the text
+            moneyText.text = money.ToString(); // Update the text
         }
         else
         {
-            moneyText.text = "Money: $" + money.ToString() + " \nPress Space to win!";
+            moneyText.text = money.ToString() + " \nPress Space to win!";
         }
     }
 }
