@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -25,6 +26,13 @@ public class CountdownTimer : MonoBehaviour
         gameOverPanel.SetActive(false); // Ensure the game over panel is inactive at the start
     }
 
+    private string GetFormattedTime(float time)
+    {
+        int minutes = Mathf.FloorToInt(time / 60F);
+        int seconds = Mathf.FloorToInt(time % 60F);
+        return string.Format("{0:00}:{1:00}", minutes, seconds);
+    }
+
     void Update()
     {
         if (timerRunning && timerText != null && remainingTime > 0)
@@ -37,17 +45,34 @@ public class CountdownTimer : MonoBehaviour
                 ShowGameOverPanel();
             }
 
-            int minutes = Mathf.FloorToInt(remainingTime / 60F);
-            int seconds = Mathf.FloorToInt(remainingTime % 60F);
-            timerText.text = "Remaining Time: " + string.Format("{0:00}:{1:00}", minutes, seconds);
-            Debug.Log("Time: " + timerText.text);
+            timerText.text = "Remaining Time: " + GetFormattedTime(remainingTime);
         }
     }
 
+    public void ResetTimer()
+    {
+        remainingTime = startTime;
+        timerRunning = false;
+        if (timerText != null)
+        {
+            timerText.text = "Remaining Time: " + GetFormattedTime(remainingTime);
+        }
+    }
     public void StartTimer()
     {
         remainingTime = startTime; // Initialize the remaining time
         timerRunning = true; // Start the timer
+    }
+
+    public float GetRemainingTime()
+    {
+        return remainingTime;
+    }
+
+    public void SetRemainingTime(float time)
+    {
+        remainingTime = time;
+        timerRunning = true;
     }
 
     void ShowGameOverPanel()

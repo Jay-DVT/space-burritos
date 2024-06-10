@@ -83,6 +83,15 @@ public class CookingStation : MonoBehaviour
         }
     }
 
+    public void ResetStation()
+    {
+        currentCookingTime = upgradeData.baseCookingTime;
+        currentProductValue = upgradeData.baseProductPrice;
+        speedUpgradeLevel = 0;
+        valueUpgradeLevel = 0;
+    }
+
+
     public CookingStationData SaveData()
     {
         return new CookingStationData
