@@ -20,11 +20,11 @@ public class UI : MonoBehaviour
         if (economy != null)
             if (economy.money >= 10)
             {
-                moneyText.text = "Money: $" + economy.money.ToString() + " \nPress Space to win!";
+                moneyText.text = economy.money.ToString() + " \nPress Space to win!";
             }
             else
             {
-                moneyText.text = "Money: $" + economy.money.ToString(); // Update the text
+                moneyText.text = economy.money.ToString(); // Update the text
             }
     }
 }
