@@ -21,19 +21,27 @@ public class UpgradeManager : MonoBehaviour
 
     public void UpgradeCookingSpeed(int stationIndex)
     {
-        if (stationIndex >= 0 && stationIndex < cookingStations.Length)
+        if (stationIndex >= 0 && stationIndex < cookingStations.Length && cookingStations[stationIndex].CanUpgradeCookingSpeed())
         {
             cookingStations[stationIndex].UpgradeCookingSpeed();
             UpgradePanel.Instance.UpdateUpgradeCosts();
+        }
+        else
+        {
+            Debug.Log("Cannot upgrade cooking speed");
         }
     }
 
     public void UpgradeProductValue(int stationIndex)
     {
-        if (stationIndex >= 0 && stationIndex < cookingStations.Length)
+        if (stationIndex >= 0 && stationIndex < cookingStations.Length && cookingStations[stationIndex].CanUpgradeProductValue())
         {
             cookingStations[stationIndex].UpgradeProductValue();
             UpgradePanel.Instance.UpdateUpgradeCosts();
+        }
+        else
+        {
+            Debug.Log("Cannot upgrade product value");
         }
     }
 }

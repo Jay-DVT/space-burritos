@@ -9,6 +9,7 @@ public class CookingStation : MonoBehaviour
     private int currentProductValue;
     public int speedUpgradeLevel = 0;
     public int valueUpgradeLevel = 0;
+    private const int maxUpgradeLevel = 5;
 
     void Start()
     {
@@ -44,6 +45,11 @@ public class CookingStation : MonoBehaviour
         return Instantiate(upgradeData.foodPrefab, transform.position, Quaternion.identity);
     }
 
+    public bool CanUpgradeCookingSpeed()
+    {
+        return speedUpgradeLevel < maxUpgradeLevel;
+    }
+
     public void UpgradeCookingSpeed()
     {
         int currentSpeedUpgradeCost = Mathf.CeilToInt(upgradeData.baseUpgradeCost * Mathf.Pow(upgradeData.upgradeCostMultiplier, speedUpgradeLevel));
@@ -56,6 +62,11 @@ public class CookingStation : MonoBehaviour
         {
             Debug.Log("Not enough money for speed upgrade!");
         }
+    }
+
+    public bool CanUpgradeProductValue()
+    {
+        return valueUpgradeLevel < maxUpgradeLevel;
     }
 
     public void UpgradeProductValue()
