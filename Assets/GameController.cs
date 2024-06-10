@@ -9,19 +9,44 @@ public class GameController : MonoBehaviour
     public GameObject endGamePanel;
     public GameObject startGamePanel;
 
-    private Economy economy;
+    public GameObject pauseMenuPanel;
+    public GameObject upgradeMenuPanel;
+    private bool isPaused = false;
 
-    void Start()
+
+    public void Resume()
     {
-        Time.timeScale = 0;
-        if (economy == null)
-        {
-            economy = FindObjectOfType<Economy>();
-        }
+        pauseMenuPanel.SetActive(false);
+        upgradeMenuPanel.SetActive(false);
+        Time.timeScale = 1f;
+        isPaused = false;
     }
 
+    public void UpgradeMenu()
+    {
+        upgradeMenuPanel.SetActive(true);
+        Time.timeScale = 0f;
+        isPaused = true;
+    }
+
+    private void Pause()
+    {
+        pauseMenuPanel.SetActive(true);
+        Time.timeScale = 0f;
+        isPaused = true;
+    }
+
+    private void HandlePauseInput()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (isPaused) Resume();
+            else Pause();
+        }
+    }
     void Update()
     {
+        HandlePauseInput();
         if (Input.GetKeyDown(KeyCode.Space))
         {
             CheckMoneyAndEndGame();
@@ -30,7 +55,7 @@ public class GameController : MonoBehaviour
 
     void CheckMoneyAndEndGame()
     {
-        if (economy.money >= requiredMoney)
+        if (Economy.GetInstance().money >= requiredMoney)
         {
             endGamePanel.SetActive(true);
             Time.timeScale = 0;
