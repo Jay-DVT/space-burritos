@@ -2434,8 +2434,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cookingTime: 5
-  productName: 
-  productPrice: 0
+  productName: Normal Burrito
+  productPrice: 15
   foodPrefab: {fileID: 5445976725541256225, guid: 4cbd3983d105b4f83b0c00544408d93a, type: 3}
 --- !u!1 &374683490
 GameObject:
@@ -3522,8 +3522,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cookingTime: 5
-  productName: 
-  productPrice: 0
+  productName: Veggie Burrito
+  productPrice: 15
   foodPrefab: {fileID: 5445976725541256225, guid: 4224f610b0a494c318038bb8602f8f9c, type: 3}
 --- !u!1 &756636856
 GameObject:
@@ -4840,7 +4840,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moneyText: {fileID: 1020641879}
-  economy: {fileID: 685729941}
 --- !u!1 &1337399475
 GameObject:
   m_ObjectHideFlags: 0
@@ -5471,7 +5470,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1895215438}
   - {fileID: 1020641878}
   - {fileID: 2062248843}
   - {fileID: 75296983}
@@ -6254,7 +6252,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1895215434}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
@@ -6262,7 +6260,7 @@ RectTransform:
   - {fileID: 1872378869}
   - {fileID: 438995026}
   - {fileID: 488416308}
-  m_Father: {fileID: 1466101439}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -6916,8 +6914,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cookingTime: 5
-  productName: 
-  productPrice: 0
+  productName: Fries Burrito
+  productPrice: 17
   foodPrefab: {fileID: 5445976725541256225, guid: 3574fb5a858f948849aad0f6861d9d75, type: 3}
 --- !u!1 &2014304119
 GameObject:
@@ -7731,6 +7729,7 @@ SceneRoots:
   - {fileID: 8736897}
   - {fileID: 1406706640}
   - {fileID: 1277594918}
+  - {fileID: 1895215438}
   - {fileID: 2067465369}
   - {fileID: 685729942}
   - {fileID: 1466101439}

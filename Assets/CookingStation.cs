@@ -9,15 +9,7 @@ public class CookingStation : MonoBehaviour
     public int productPrice; // Price of the product
     public GameObject foodPrefab;
 
-    private Economy economy;
 
-    void Start()
-    {
-        if (economy == null)
-        {
-            economy = FindObjectOfType<Economy>();
-        }
-    }
 
     public IEnumerator PerformTask(EmployeeBehaviour employee, Transform customerTransform)
     {
@@ -36,7 +28,7 @@ public class CookingStation : MonoBehaviour
             yield return null;
         }
 
-        economy.AddMoney(productPrice);
+        Economy.GetInstance().AddMoney(productPrice);
 
         employee.isAvailable = true;
     }

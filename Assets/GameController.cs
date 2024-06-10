@@ -9,19 +9,10 @@ public class GameController : MonoBehaviour
     public GameObject endGamePanel;
     public GameObject startGamePanel;
 
-    private Economy economy;
     public GameObject pauseMenuPanel;
     public GameObject upgradeMenuPanel;
     private bool isPaused = false;
 
-    void Start()
-    {
-        Time.timeScale = 0;
-        if (economy == null)
-        {
-            economy = FindObjectOfType<Economy>();
-        }
-    }
 
     public void Resume()
     {
@@ -64,7 +55,7 @@ public class GameController : MonoBehaviour
 
     void CheckMoneyAndEndGame()
     {
-        if (economy.money >= requiredMoney)
+        if (Economy.GetInstance().money >= requiredMoney)
         {
             endGamePanel.SetActive(true);
             Time.timeScale = 0;
