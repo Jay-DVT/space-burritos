@@ -65,12 +65,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\CustomerSpawner.cs" />
+    <Compile Include="Assets\CookingStationData.cs" />
+    <Compile Include="Assets\UpgradeManager.cs" />
     <Compile Include="Assets\Economy.cs" />
+    <Compile Include="Assets\UpgradeData.cs" />
     <Compile Include="Assets\CustomerMovement.cs" />
     <Compile Include="Assets\EmployeeSpawner.cs" />
     <Compile Include="Assets\EmployeeBehaviour.cs" />
     <Compile Include="Assets\UI.cs" />
     <Compile Include="Assets\CookingStation.cs" />
+    <Compile Include="Assets\UpgradePanel.cs" />
     <Compile Include="Assets\GameController.cs" />
   </ItemGroup>
   <ItemGroup>
