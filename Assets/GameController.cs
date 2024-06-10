@@ -1,16 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
-    public int requiredMoney = 10;
+    public int requiredMoney;
+    public CountdownTimer countdownTimer;
     public GameObject endGamePanel;
     public GameObject startGamePanel;
 
     public GameObject pauseMenuPanel;
     public GameObject upgradeMenuPanel;
+    public GameObject introPanel;
     private bool isPaused = false;
 
 
@@ -62,10 +65,23 @@ public class GameController : MonoBehaviour
         }
     }
 
+    public void StartIntro()
+    {
+        startGamePanel.SetActive(false);
+        introPanel.SetActive(true);
+    }
+
     public void StartGame()
     {
         startGamePanel.SetActive(false);
+        introPanel.SetActive(false);
         Time.timeScale = 1;
+        if (countdownTimer != null)
+        {
+            Debug.Log("Starting countdown timer");
+            countdownTimer.StartTimer(); // Start the countdown timer
+        }
+
     }
 
     public void ResetGame()

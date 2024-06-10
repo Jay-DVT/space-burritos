@@ -35,7 +35,6 @@ public class CustomerMovement : MonoBehaviour
         }
         Destroy(gameObject);
 
-        Debug.Log("Reached exit");
     }
 
 

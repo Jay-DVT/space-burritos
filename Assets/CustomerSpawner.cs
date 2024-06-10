@@ -7,7 +7,7 @@ public class CustomerSpawner : MonoBehaviour
     public GameObject customerPrefab; // Assign this from the editor
     public Vector2 spawnPosition; // World coordinates for spawning the customer
     public Vector2 destinationPosition; // World coordinates for the destination
-    private float deltaY = .8f;
+    private float deltaY = .5f;
     public Vector2 exitPosition; // World coordinates for the exit
 
     public float flatSpawningDelta = 7f;

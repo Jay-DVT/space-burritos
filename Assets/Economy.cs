@@ -35,7 +35,6 @@ public class Economy : MonoBehaviour
     public void AddMoney(int amount)
     {
         money += amount;
-        Debug.Log("Money: " + money);
     }
 
     public bool MakeTransaction(int amount)

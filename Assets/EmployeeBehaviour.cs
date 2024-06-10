@@ -88,7 +88,6 @@ public class EmployeeBehaviour : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Employee"))
         {
-            // Lógica opcional cuando colisiona con otro empleado
             Debug.Log("Collision with another employee!");
         }
     }
